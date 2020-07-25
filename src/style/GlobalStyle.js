@@ -6,9 +6,16 @@ export const GlobalStyle = StyleSheet.create({
 
     container:{
         flex: 1,
-        justifyContent: 'center',
-        alignContent: 'center',
-        alignItems: 'center',
     },
-    
+    button:{
+        backgroundColor: '#3498DB',
+        height: 50,
+        marginTop: 20,
+        borderRadius: 50,
+        textAlign: "center",
+        textAlignVertical: 'center',
+        fontWeight: 'bold',
+        fontSize: 18,
+        color: 'white'
+    },
 });

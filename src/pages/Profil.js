@@ -3,10 +3,10 @@ import {View, Text} from 'react-native';
 
 import {GlobalStyle} from '../style/GlobalStyle';
 
-export default function Home(){
+export default function Profil(){
     return(
         <View style={GlobalStyle.container}>
-            <Text>Hello world</Text>
+            <Text>Hello Profil</Text>
         </View>
     );
 }
