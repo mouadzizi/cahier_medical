@@ -7,7 +7,9 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 import SignIn from './src/pages/SignIn';
 import SignUp from './src/pages/SignUp';
 import Home from './src/pages/Home';
+import Places from './src/pages/Places';
 import Profil from './src/pages/Profil';
+import MedicalAct from './src/pages/ActMedical';
 
 import {auth} from './src/data/Firebase';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
@@ -53,7 +55,9 @@ return(
 function MyTabs() {
   return (
     <TabNav.Navigator>
-      <TabNav.Screen name="Home" component={Home} options={{ title: 'Cahier Medical' }} />
+      <TabNav.Screen name="Home" component={Home} options={{ title: 'Home' }} /> 
+      <TabNav.Screen name="Medical Act" component={MedicalAct}  options={{ title: ' Med Act ' }}/>
+      <TabNav.Screen name="Places" component={Places}  options={{ title: ' Places' }}/>
       <TabNav.Screen name="Profil" component={Profil}  options={{ title: ' Profil ' }}/>
     </TabNav.Navigator>
   );
@@ -75,21 +79,21 @@ function MyContainer(){
                },
                headerLeft: () => (
                 <TouchableOpacity
-                style={{marginLeft: 30}}
+                style={{marginLeft: 20}}
                 onPress={()=>signOutUser()}>
                 <FontAwesome5
                 name='power-off'
-                size={30}
+                size={20}
                 color='#fff'
                 />
                 </TouchableOpacity> ),
               headerRight:()=>(
                   <Text 
-                    style={{color:'white',fontWeight:'bold',fontSize:18}}
+                    style={{color:'white',fontWeight:'bold',fontSize:15}}
                   > @{auth.currentUser.displayName} </Text>
                 ),
               headerRightContainerStyle:{
-                  paddingRight:8
+                  paddingRight:10
                 }
     }}/>
     </Container.Navigator>

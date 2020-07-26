@@ -1,12 +1,22 @@
-import React from 'react';
-import {View, Text} from 'react-native';
+import React, {useState} from 'react';
+import {View, Alert} from 'react-native';
+import { FAB } from 'react-native-paper';
 
 import {GlobalStyle} from '../style/GlobalStyle';
 
 export default function Home(){
+
+
+
     return(
         <View style={GlobalStyle.container}>
-            <Text>Hello world</Text>
+           
+           <FAB
+            style={GlobalStyle.fab}
+            small
+            icon="calendar-check"
+            onPress={() => Alert.alert('add a new opointment')}/>
+
         </View>
     );
 }

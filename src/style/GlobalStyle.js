@@ -18,4 +18,12 @@ export const GlobalStyle = StyleSheet.create({
         fontSize: 18,
         color: 'white'
     },
+    fab:{
+        position: 'absolute',
+        margin: 20,
+        right: 0,
+        bottom: 0,
+        color: '#fff',
+        backgroundColor:'#3498DB',
+    },
 });

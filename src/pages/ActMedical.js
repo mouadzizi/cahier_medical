@@ -1,12 +1,22 @@
-import React from 'react';
-import {View, Text} from 'react-native';
+import React, {useState} from 'react';
+import {View} from 'react-native';
+import { FAB } from 'react-native-paper';
 
 import {GlobalStyle} from '../style/GlobalStyle';
 
 export default function ActMedical(){
+
+
+
     return(
         <View style={GlobalStyle.container}>
-            <Text>Hello ActMedical</Text>
+           
+           <FAB
+            style={GlobalStyle.fab}
+            color='white'
+            icon="plus"
+            onPress={() => console.log('Pressed')}/>
+
         </View>
     );
 }
