@@ -13,7 +13,6 @@ export default function Home(){
            
            <FAB
             style={GlobalStyle.fab}
-            small
             icon="calendar-check"
             onPress={() => Alert.alert('add a new opointment')}/>
 
